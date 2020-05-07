@@ -130,7 +130,7 @@ namespace solver
     ComplexVariable operator/(const ComplexVariable &r, const complex<double> d)
     {
         if (d.imag() == 0 && d.real() == 0)
-            throw std::runtime_error(std::string("cannot divide with zero!"));
+            throw std::runtime_error(std::string("cannot divide! with zero"));
         return ComplexVariable(r.a / d, r.b / d, r.c / d);
     }
 
