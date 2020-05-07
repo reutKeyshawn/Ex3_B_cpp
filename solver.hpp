@@ -50,7 +50,7 @@ namespace solver
         friend RealVariable operator==(const RealVariable &x, const double num);
         friend RealVariable operator==(const RealVariable &x1, const RealVariable &x)
         {
-            return l - r;
+            return x1 - x;
         }
         friend RealVariable operator==(const RealVariable &x, const double num);
     };
@@ -70,18 +70,18 @@ namespace solver
         }
 
         //right
-        friend ComplexVariable operator+(const complex<double> d, const ComplexVariable &y);
-        friend ComplexVariable operator-(const complex<double> d, const ComplexVariable &y);
-        friend ComplexVariable operator*(const complex<double> d, const ComplexVariable &y);
+        friend ComplexVariable operator+(const complex<double> c, const ComplexVariable &y);
+        friend ComplexVariable operator-(const complex<double> c, const ComplexVariable &y);
+        friend ComplexVariable operator*(const complex<double> c, const ComplexVariable &y);
         friend ComplexVariable operator/(const complex<double> r, const ComplexVariable &d);
         friend ComplexVariable operator^(const complex<double> r, const ComplexVariable &d);
 
         //left
-        friend ComplexVariable operator+(const ComplexVariable &y, const complex<double> d);
-        friend ComplexVariable operator-(const ComplexVariable &y, const complex<double> d);
-        friend ComplexVariable operator*(const ComplexVariable &y, const complex<double> d);
-        friend ComplexVariable operator/(const ComplexVariable &y, const complex<double> d);
-        friend ComplexVariable operator^(const ComplexVariable &y, const complex<double> d);
+        friend ComplexVariable operator+(const ComplexVariable &y, const complex<double> c);
+        friend ComplexVariable operator-(const ComplexVariable &y, const complex<double> c);
+        friend ComplexVariable operator*(const ComplexVariable &y, const complex<double> c);
+        friend ComplexVariable operator/(const ComplexVariable &y, const complex<double> c);
+        friend ComplexVariable operator^(const ComplexVariable &y, const complex<double> c);
         //both
         friend ComplexVariable operator+(const ComplexVariable &y1, const ComplexVariable &y);
         friend ComplexVariable operator-(const ComplexVariable &y1, const ComplexVariable &y);
@@ -89,8 +89,8 @@ namespace solver
         friend ComplexVariable operator/(const ComplexVariable &y1, const ComplexVariable &y);
         friend ComplexVariable operator^(const ComplexVariable &y1, const ComplexVariable &y);
         //relevant for solve function
-        friend ComplexVariable operator==(const complex<double> d, const ComplexVariable &y);
-        friend ComplexVariable operator==(const ComplexVariable &y1, const complex<double> d);
+        friend ComplexVariable operator==(const complex<double> c, const ComplexVariable &y);
+        friend ComplexVariable operator==(const ComplexVariable &y1, const complex<double> c);
         friend ComplexVariable operator==(const ComplexVariable &y1, const ComplexVariable &y);
     };
 
